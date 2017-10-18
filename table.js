@@ -50,7 +50,7 @@ makeStands();
 
 console.log(allLocations);
 
-function makeHeaderRow() {
+function makeHeaderRow() { //method to create table header rows (inherited to each location)
   var trEl = document.createElement('tr');
   for (var i = -1; i < hours.length; i++) {
     var thEl = document.createElement('th');
@@ -67,7 +67,7 @@ function makeHeaderRow() {
 };
 makeHeaderRow();
 
-function makeTableDataRow() {
+function makeTableDataRow() { //method to create complete data rows (inherited to each location)
   for (var k = 0; k < allLocations.length; k++) {
     var trEl = document.createElement('tr');
     for (var j = -1; j < hours.length; j++) {
@@ -89,6 +89,17 @@ function makeTableDataRow() {
   }
 }
 makeTableDataRow();
+
+var tdTotalEl = document.createElement('td');
+tdTotalEl.textContent = this.cookiesTotal;
+trEl.appendChild(tdTotalEl);
+tableEl.appendChild(trEl);
+
+// this.totalCookies = function() {
+//   for (var i = 0; i < this.cookiesSoldPerHour; i ++) {
+//     this.cookiesTotal +=
+//   }
+// }
 
 //Stretch Goals - Make Totals Footer Row in Table
 // function makeFooterRow() {
@@ -137,3 +148,11 @@ makeTableDataRow();
 //   }
 // };
 // this.totalSalesCalc();
+
+// function hourlyTotal
+//
+// this.tossersPerHour = function() {
+//   for (var i = 0; i < this.cookiesSoldPerHour.length; i ++) {
+//     if (this.randCustByHour() / 20)
+//   }
+// }
