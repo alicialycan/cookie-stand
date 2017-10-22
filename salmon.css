@@ -1,3 +1,7 @@
+/*
+Global for all pages
+*/
+
 body {
   font-family: Verdana, Times, sans-serif;
 }
@@ -15,6 +19,27 @@ header {
   background-color: #7C4144;
   color: white;
 }
+
+h1 {
+  font-family: Georgia;
+  font-size: 20px;
+  color: #D24847;
+}
+
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/*
+Navigation Bar
+*/
 
 nav {
   list-style: none;
@@ -49,49 +74,9 @@ li a:hover:not(.active) {
     background-color: #437ACA;
 }
 
-.salmonlogo {
-  position: absolute;
-  top: 17px;
-  width: 175px;
-  margin-left: 25%;
-}
-
-.highlights {
-  font-family: 'Oswald', sans-serif;
-  font-size: 30px;
-  font-style: italic;
-  color: #41A3F1;
-}
-
-#background_index {
-  margin: auto;
-  background-image: url('images/pike_place_background.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 15%;
-}
-
-background_sales {
-  background-image: url('images/pike_place_background.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
-#hoursandcookies{
-  float: left;
-  margin: 20px;
-  border-radius: 25px;
-  max-width: 200px;
-  width: 25%;
-  height: auto;
-  background: rgba(240, 240, 240, 0.8);
-  padding: 20px;
-}
+/*
+Divs
+*/
 
 #homepage {
   margin: 20px;
@@ -115,21 +100,93 @@ background: #EFD6A8;
 padding: 10px;
 }
 
-h1 {
-  font-family: Georgia;
-  font-size: 20px;
-  color: #D24847;
+.salmonlogo {
+  position: absolute;
+  top: 17px;
+  width: 175px;
+  margin-left: 25%;
 }
 
-h3 {
+.highlights {
   font-family: 'Oswald', sans-serif;
-  font-size: 25px;
-  margin: 0;
+  font-size: 30px;
+  font-style: italic;
+  color: #41A3F1;
 }
 
-p {
-  font-size: 16px;
-  font-weight: normal;
+#background_index {
+  margin: auto;
+  background-image: url('images/pike_place_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 15%;
+}
+
+#background_sales {
+  background-image: url('images/pike_place_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+Table
+*/
+#sales_report {
+  list-style: none;
+}
+
+#sales_report:li:last-of-type {
+  border-top: 1px solid black;
+}
+
+table {
+  table-layout: fixed;
+  display: inline-table;
+  width: 100%;
+}
+td {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  height: 55px;
+}
+th {
+  transform: rotate(310deg);
+  font-size: 14px;
+}
+
+#tableheaderspace {
+  padding-left: 87px;
+}
+
+#tableheaderrow {
+  padding: 15px 6px 5px 6px;
+}
+
+td:last-child, th:last-child {
+  border-right: none;
+  transform: rotate(0deg);
+}
+
+table, table * {
+  text-align: right;
+  padding: 5px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+table tr td:first-child {
+  text-align: left;
+  width: 100px;
+}
+
+main {
+  width: 100%;
 }
 
 .footer {
