@@ -72,6 +72,29 @@ function renderLocations() {
   renderTableFooter(); //render table footer
 }
 
+//Create event listener function to run after submit button clicked
+function addLocations(event) {
+  event.preventDefault(); //prevent page from reloading after form is submitted
+
+  var location = event.target.location.value; //Pull text from form to build object
+  var minCustPerHour = parseInt(event.target.minCustPerHour.value); //Pull text from form to build object
+  var maxCustPerHour = parseInt(event.target.maxCustPerHour.value);
+  var avgCookieSoldPerHour = parseFloat(event.target.avgCookiesSoldPerHour.value);
+
+  if (maxCustPerHour < minCustPerHour) {
+    alert('Maximum customers per hour must be greater than or equal to minimum customers per hour');
+  } else {
+    new Stores(minCustPerHour, maxCustPerHour, avgCookieSoldPerHour, location);
+  }
+
+  event.target.location.value = null; //Remove text from form after submit
+  event.target.minCustPerHour.value = null; //Remove text from form after submit
+  event.target.maxCustPerHour.value = null; //Remove text from form after submit
+  event.target.avgCookiesSoldPerHour.value = null; //Remove text from form after submit
+
+  renderLocations(); //run renderLocations function
+}
+
 //Render table header
 function renderTableHeader() {
   var tableHeadEl = document.createElement('tablehead'); //create table header element
@@ -124,6 +147,9 @@ function calcTotalSales() {
     netTotalLocationsSales += locations[n].totalCookies; //Add total cookies sold for current store locations[m] to totalAllLocationsSales total
   }
 }
+
+//Create Event Listener for submit button clicks on newLocations form
+newLocations.addEventListener('submit', addLocations);
 
 //Render all locations
 renderLocations();
