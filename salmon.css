@@ -8,13 +8,12 @@ body {
 
 header {
   width: auto;
-  margin-top: o;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   position: sticky;
   top: 0;
   z-index: 0;
-  padding: 20px;
   text-align: center;
   background-color: #7C4144;
   color: white;
@@ -23,7 +22,10 @@ header {
 h1 {
   font-family: Georgia;
   font-size: 20px;
+  line-height: 30px;
+  padding: 5px 0 30px 0;
   color: #D24847;
+  text-align: center;
 }
 
 h3 {
@@ -37,18 +39,62 @@ p {
   font-weight: normal;
 }
 
+.box1 {
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border: solid sienna 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box2 {
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border: solid sienna 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box3 {
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border: solid sienna 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.lineheight {
+  line-height: 20px;
+}
+
 /*
 Navigation Bar
 */
 
 nav {
   list-style: none;
-  margin: 5px;
-  padding: 5px;
+  width: auto;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  padding: 20px;
 }
 
 ul {
     list-style-type: none;
+    width: auto;
     margin: 5px;
     padding: 0;
     overflow: hidden;
@@ -61,17 +107,18 @@ li {
 li a {
     display: block;
     color: white;
+    font-size: 18px;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #D24847;
 }
 
 .active {
-    background-color: #437ACA;
+    background-color: #41A3F1;
 }
 
 /*
@@ -100,6 +147,21 @@ background: #EFD6A8;
 padding: 10px;
 }
 
+.fishpic {
+  float: right;
+  clear: left;
+  position: absolute;
+  width: 400px;
+  align-content: center;
+  border-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: solid sienna 5px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .salmonlogo {
   position: absolute;
   top: 17px;
@@ -112,6 +174,10 @@ padding: 10px;
   font-size: 30px;
   font-style: italic;
   color: #41A3F1;
+}
+
+.highlights:hover {
+  color: #D24847;
 }
 
 #background_index {
@@ -136,6 +202,7 @@ padding: 10px;
 /*
 Table
 */
+
 #sales_report {
   list-style: none;
 }

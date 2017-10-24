@@ -1,0 +1,13 @@
+h1, .h1 {
+    margin: 0;
+    margin-bottom: 0.7em;
+    color: #000;
+    font-family: "Oswald", Verdana, Arial, sans-serif;
+    font-size: 59px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 66px;
+    height: 78px;
+    text-rendering: optimizeLegibility;
+    text-transform: uppercase;
+}
