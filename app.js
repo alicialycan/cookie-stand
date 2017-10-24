@@ -72,6 +72,7 @@ function renderLocations() {
   calcTotalSales(); //calculate new sales calcTotalSales
   renderTableFooter(); //render table footer
 }
+renderLocations(); //run renderLocations function
 
 //Create event listener function to run after submit button clicked
 function addLocations(event) {
@@ -87,15 +88,13 @@ function addLocations(event) {
   } else {
     new Stores(minCustPerHour, maxCustPerHour, avgCookieSoldPerHour, location);
   }
+  event.target.location.value = null; //Remove text from form after submit
+  event.target.minCustPerHour.value = null; //Remove text from form after submit
+  event.target.maxCustPerHour.value = null; //Remove text from form after submit
+  event.target.avgCookiesSoldPerHour.value = null; //Remove text from form after submit
 
-  // event.target.location.value = null; //Remove text from form after submit
-  // event.target.minCustPerHour.value = null; //Remove text from form after submit
-  // event.target.maxCustPerHour.value = null; //Remove text from form after submit
-  // event.target.avgCookiesSoldPerHour.value = null; //Remove text from form after submit
-
-  renderLocations(); //run renderLocations function
+  document.getElementById('sales_report').deleteRow(locations.lenth);
 }
-
 //Render table header
 function renderTableHeader() {
   var tableHeadEl = document.createElement('tablehead'); //create table header element
@@ -140,7 +139,7 @@ renderTableFooter();
 function calcTotalSales() {
   for (var l = 0; l < hours.length; l++) { //Create a loop for store hours
     var hourlyCookieSales = 0; //Set hourly cookie sales to 0 for each store hour
-    for (var m = 0; m < locations.length; m++) {//Create a loop for store locations at current hour
+    for (var m = 0; m < locations.length; m++) { //Create a loop for store locations at current hour
       hourlyCookieSales += locations[m].cookiesSoldPerHour[l]; //Add current cookie sales per hour
       console.log(locations[m].cookiesSoldPerHour[l]);
     }
